@@ -54,6 +54,7 @@ Temporary Items
 /.idea/libraries
 .DS_Store
 /build
+./Vins-Droidcv310/openCVLibrary310/build/
 /captures
 .externalNativeBuild
 

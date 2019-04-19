@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "com.martin.ads.testopencv"
         minSdkVersion 21
-        targetSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -17,14 +17,14 @@ android {
 //            }
             cmake {
                 // "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang",
-                arguments "-DCMAKE_BUILD_TYPE=Release", "-DANDROID_STL=c++_static"
+                arguments "-DCMAKE_BUILD_TYPE=Release", "-DANDROID_STL=c++_shared"
                 // cppFlags "-std=c++0x","-frtti", "-fexceptions"
                 cppFlags "-frtti -fexceptions -std=c++0x"
             }
         }
         ndk {
-            abiFilters 'armeabi-v7a'
-//            abiFilters 'arm64-v8a'
+            // abiFilters 'armeabi-v7a'
+            abiFilters 'arm64-v8a'
         }
     }
     buildTypes {
