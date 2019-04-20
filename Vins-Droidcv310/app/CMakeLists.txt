@@ -23,7 +23,7 @@ include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/include/)
 
 #include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/include/ceres)
 include_directories(${CERES_PATH}/include/ceres)
-#include_directories(${CERES_PATH}/internal/ceres)
+include_directories(${CERES_PATH}/internal/ceres)
 
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/src/camera_model/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/src/a2ir)

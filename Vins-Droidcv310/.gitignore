@@ -56,4 +56,4 @@ Temporary Items
 /build
 /captures
 .externalNativeBuild
-
+./openCVLibrary310/build/
