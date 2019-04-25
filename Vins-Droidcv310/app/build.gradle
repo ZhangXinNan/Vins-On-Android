@@ -1,19 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 28
+    // buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.martin.ads.testopencv"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
                 //"-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang",
-                arguments "-DCMAKE_BUILD_TYPE=Release" ,"-DANDROID_STL=gnustl_static"
+                arguments "-DCMAKE_BUILD_TYPE=Debug" ,"-DANDROID_STL=c++_static"
 //                cppFlags "-std=c++0x","-frtti", "-fexceptions"
                 cppFlags "-frtti -fexceptions -std=c++0x"
             }
@@ -46,6 +46,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation project(':openCVLibrary310')
 }

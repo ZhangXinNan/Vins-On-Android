@@ -11,8 +11,9 @@
 #include "ThirdParty/DVision/DVision.h" // Brief
 
 // OpenCV
-#include <opencv/cv.h>
-#include <opencv/highgui.h>
+//#include <opencv/cv.h>
+//#include <opencv/highgui.h>
+#include <opencv2/opencv.hpp>
 
 #include "demoDetector.h"
 //#include "brief_extractor.h"

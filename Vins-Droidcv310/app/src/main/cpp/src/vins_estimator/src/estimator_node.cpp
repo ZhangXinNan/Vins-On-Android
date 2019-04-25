@@ -394,7 +394,7 @@ void process_loop_detection()
                     cv::Mat gray_img, loop_match_img;
                     cv::Mat old_img = old_kf->image;
                     cv::hconcat(old_img, current_image, gray_img);
-                    cvtColor(gray_img, loop_match_img, CV_GRAY2RGB);
+                    cvtColor(gray_img, loop_match_img, cv::COLOR_GRAY2RGB);
                     cv::Mat loop_match_img2;
                     loop_match_img2 = loop_match_img.clone();
                     /*
@@ -902,7 +902,7 @@ void img_callback(const cv::Mat &gray_img, const ros::Time &timestamp, vector<Po
             for (int i = 0; i < NUM_OF_CAM; i++)
             {
                 cv::Mat tmp_img = stereo_img.rowRange(i * ROW, (i + 1) * ROW);
-                cv::cvtColor(gray_img, tmp_img, CV_GRAY2RGB);
+                cv::cvtColor(gray_img, tmp_img, cv::COLOR_GRAY2RGB);
                 if (i != 1 || !STEREO_TRACK)
                 {
                     for (unsigned int j = 0; j < trackerData[i].cur_pts.size(); j++)
